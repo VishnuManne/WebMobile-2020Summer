@@ -1,0 +1,41 @@
+!doctype html
+html class=no-js lang=
+
+head
+  meta charset=utf-8
+  titletitle
+  meta name=description content=
+  meta name=viewport content=width=device-width, initial-scale=1
+
+  meta property=ogtitle content=
+  meta property=ogtype content=
+  meta property=ogurl content=
+  meta property=ogimage content=
+
+  link rel=manifest href=site.webmanifest
+  link rel=apple-touch-icon href=icon.png
+  !-- Place favicon.ico in the root directory --
+
+  link rel=stylesheet href=cssnormalize.css
+  link rel=stylesheet href=cssmain.css
+
+  meta name=theme-color content=#fafafa
+head
+
+body
+
+  !-- Add your site or application content here --
+  pHello world! This is HTML5 Boilerplate.p
+  script src=jsvendormodernizr-3.11.2.min.jsscript
+  script src=jsplugins.jsscript
+  script src=jsmain.jsscript
+
+  !-- Google Analytics change UA-XXXXX-Y to be your site's ID. --
+  script
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  script
+  script src=httpswww.google-analytics.comanalytics.js asyncscript
+body
+
+html
