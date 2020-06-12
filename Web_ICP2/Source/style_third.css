@@ -1,0 +1,17 @@
+/* CSS for Parent element */
+.flex_container {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100%;
+    line-height:30px;
+    align-items: center;
+    justify-content: center;
+}
+/* CSS for Child element */
+.flex_item {
+    margin: 5px;
+    text-align: center;
+    height:70px;
+    width:70px
+}
