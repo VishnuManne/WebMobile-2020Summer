@@ -1,0 +1,56 @@
+<!-- declaring the document type -->
+<!DOCTYPE html>
+<!-- Language for the document -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      background-image: url('https://i.pinimg.com/originals/36/f0/94/36f0949c623b61a235fd6645fa507236.jpg');
+      background-repeat: no-repeat;
+    }
+  </style>
+</head>
+<body>
+<div class="todos">
+  <header class="text-center" style="padding-bottom: 20px">
+    <h1>Vishnu's Todo List</h1>
+  </header>
+
+  <form>
+    <div class="row">
+      <div class="col-6">
+        <input type="text" class="form-control" placeholder="Enter the task to Add" name="todo" [(ngModel)]="todo">
+      </div>
+      <!-- </div> -->
+      <div class="col-6">
+        <input type="datetime-local" class="form-control" id="tasktime" [(ngModel)]="time" name="time">
+      </div>
+    </div>
+    <div class="row text-center mt-20">
+      <div class="col">
+        <button type="button" class="btn btn-success" (click)="saveTodo()">Add Task</button>
+      </div>
+    </div>
+  </form>
+  <div class="todo-list mt-20">
+    <ul class="todo-list list-card">
+      <li class="list-item-card pt-10" *ngFor="let todo of todos;let i=index" [class.completed]="todo.completed">
+        <div class="view">
+          <input class="toggle mr-10" type="checkbox" (click)="toggleTodoComplete(i)" [checked]="todo.completed">
+          <label class="mr-10">{{todo.name}}</label>
+          <span *ngIf="countDownTimes[i]">
+                    <button class="btn btn-primary mr-10">{{countDownTimes[i]?.days + 'd'}}
+                      {{countDownTimes[i]?.hours + 'h'}}
+                      {{countDownTimes[i]?.minutes + 'm'}}
+                      {{countDownTimes[i]?.seconds + 's'}}</button>
+                </span>
+          <button class="btn btn-danger delete mr-10" (click)="removeTodo(i)">Delete</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>
+
