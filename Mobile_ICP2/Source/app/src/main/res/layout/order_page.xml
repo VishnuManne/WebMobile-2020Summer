@@ -91,7 +91,7 @@
         android:id="@+id/medium_pizza"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
+        android:layout_alignParentS tart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
@@ -250,12 +250,12 @@
         android:layout_marginRight="213dp"
         android:layout_marginBottom="113dp"
         android:background="@android:color/holo_blue_dark"
-        android:onClick="orderPizzaMain"
+        android:onClick="order_pizza"
         android:text="Order"
         android:textSize="24sp" />
 
     <Button
-        android:id="@+id/orderSummary"
+        android:id="@+id/order_summary"
         android:layout_width="145dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -269,12 +269,12 @@
         android:layout_marginRight="46dp"
         android:layout_marginBottom="115dp"
         android:background="@android:color/holo_blue_dark"
-        android:onClick="orderSummary"
+        android:onClick="order_summary"
         android:text="Summary"
         android:textSize="24sp" />
 
     <Button
-        android:id="@+id/less"
+        android:id="@+id/decrease_quantity"
         android:layout_width="43dp"
         android:layout_height="43dp"
         android:layout_alignParentStart="true"
@@ -290,14 +290,14 @@
         android:layout_marginBottom="176dp"
         android:background="@drawable/order_button"
         android:gravity="center_horizontal|center_vertical"
-        android:onClick="less"
+        android:onClick="decrease_quantity"
         android:text="-"
         android:textIsSelectable="false"
         android:textSize="24sp"
         android:textStyle="normal" />
 
     <TextView
-        android:id="@+id/quantity_text_view"
+        android:id="@+id/quantity_number"
         android:layout_width="38dp"
         android:layout_height="32dp"
         android:layout_alignParentStart="true"
@@ -318,7 +318,7 @@
         android:textStyle="bold" />
 
     <Button
-        android:id="@+id/more"
+        android:id="@+id/increase_quantity"
         android:layout_width="43dp"
         android:layout_height="43dp"
         android:layout_alignParentStart="true"
@@ -333,7 +333,7 @@
         android:layout_marginRight="127dp"
         android:layout_marginBottom="176dp"
         android:background="@drawable/order_button"
-        android:onClick="more"
+        android:onClick="increase_quantity"
         android:text="+"
         android:textSize="18sp"
         android:textStyle="normal" />
