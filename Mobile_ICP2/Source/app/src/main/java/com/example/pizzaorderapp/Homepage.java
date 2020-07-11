@@ -14,7 +14,7 @@ public class Homepage extends AppCompatActivity {
         setContentView(R.layout.home_page);
 
     }
-    public void orderPizza(View view) {
+    public void ordernow(View view) {
         Intent intent = new Intent(Homepage.this, Orderpage.class);
         startActivity(intent);
     }
