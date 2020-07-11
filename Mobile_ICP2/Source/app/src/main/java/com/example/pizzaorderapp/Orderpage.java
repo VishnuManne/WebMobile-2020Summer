@@ -131,9 +131,9 @@ public class Orderpage extends AppCompatActivity {
             quantity = quantity + 1;
             display(quantity);
         } else {
-            Log.i("PizzaOrder", "Please select less than 20 Pizzas");
+            Log.i("PizzaOrder", "enter less than 10 Pizzas");
             Context context = getApplicationContext();
-            String lowerLimitToast = "Please select less than 20 Pizzas";
+            String lowerLimitToast = "enter less than 10 Pizzas";
             int duration = Toast.LENGTH_SHORT;
             Toast toast = Toast.makeText(context, lowerLimitToast, duration);
             toast.show();
