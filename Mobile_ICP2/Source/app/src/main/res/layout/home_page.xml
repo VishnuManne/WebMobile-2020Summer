@@ -15,7 +15,7 @@
         android:layout_height="57dp"
         android:background="@drawable/home_button"
         android:gravity="center_horizontal|center_vertical"
-        android:onClick="orderPizza"
+        android:onClick="ordernow"
         android:text="ORDER NOW"
         android:textColor="#090808"
         android:textSize="18sp"
