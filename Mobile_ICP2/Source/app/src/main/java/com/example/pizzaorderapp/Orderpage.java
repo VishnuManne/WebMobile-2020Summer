@@ -36,7 +36,7 @@ public class Orderpage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.order_page);
 
-        selected_quantity = findViewById(R.id.quantity_text_view);
+        selected_quantity = findViewById(R.id.quantity_number);
         customer_name = findViewById(R.id.name);
         chicken = findViewById(R.id.ck_check);
         pepperoni = findViewById(R.id.pep_check);
@@ -60,7 +60,7 @@ public class Orderpage extends AppCompatActivity {
         return false;
     }
 
-    private String fetchDetails() {
+    private String Details() {
         boolean chicken_flag = chicken.isChecked();
         boolean pepperoni_flag = pepperoni.isChecked();
         boolean onion_flag = onion.isChecked();
@@ -71,19 +71,19 @@ public class Orderpage extends AppCompatActivity {
 
         total_price = calculate_price(chicken_flag, pepperoni_flag, onion_flag, pineapple_flag, quantity);
 
-        return fetchOrderSummary(customer_name.getText().toString(), chicken_flag, pepperoni_flag, onion_flag, pineapple_flag,small_flag,medium_flag,large_flag, total_price);
+        return Summary(customer_name.getText().toString(), chicken_flag, pepperoni_flag, onion_flag, pineapple_flag,small_flag,medium_flag,large_flag, total_price);
     }
 
-    public void orderSummary(View view) {
+    public void order_summary(View view) {
         if (!isUserEmpty()) {
             orderSummary = fetchDetails();
             Intent intent = new Intent(Orderpage.this, Summary.class);
-            intent.putExtra("orderSummary", orderSummary);
+            intent.putExtra("order_summary", order_summary);
             startActivity(intent);
         }
     }
 
-    public void orderPizzaMain(View view) {
+    public void order_pizza(View view) {
         if (!isUserEmpty()) {
             orderSummary = fetchDetails();
             Intent emailIntent = new Intent(Intent.ACTION_SEND);
@@ -94,7 +94,7 @@ public class Orderpage extends AppCompatActivity {
             startActivity(Intent.createChooser(emailIntent, ""));
         }
     }
-    private String fetchOrderSummary(String userName, boolean chicken_flag, boolean pepperoni_flag,
+    private String Summary(String userName, boolean chicken_flag, boolean pepperoni_flag,
                                      boolean onion_flag, boolean pineapple_flag,boolean small_flag,boolean medium_flag, boolean large_flag, float total_price) {
         return getString(R.string.order_summary_name,userName) +"\n"+
                 getString(R.string.order_summary_small,BooleanUtils.toStringYesNo(small_flag)) +"\n"+
@@ -110,23 +110,23 @@ public class Orderpage extends AppCompatActivity {
     }
 
     private float calculate_price(boolean chicken, boolean pepperoni, boolean onion, boolean pineapple, Integer quantity) {
-        int basePrice = base_rate;
+        int Price = base_rate;
         if (chicken) {
-            basePrice += chicken_price;
+            Price += chicken_price;
         }
         if (pepperoni) {
-            basePrice += pepperoni_price;
+            Price += pepperoni_price;
         }
         if (onion){
-            basePrice += onion_price;
+            Price += onion_price;
         }
         if(pineapple){
-            basePrice += pineapple_price;
+            Price += pineapple_price;
         }
-        return quantity * basePrice;
+        return quantity * Price;
     }
 
-    public void more(View view) {
+    public void increase_quantity(View view) {
         if (quantity < 10) {
             quantity = quantity + 1;
             display(quantity);
@@ -142,12 +142,12 @@ public class Orderpage extends AppCompatActivity {
     }
 
 
-    public void less(View view) {
+    public void decrease_quantity(View view) {
         if (quantity > 1) {
             quantity = quantity - 1;
             display(quantity);
         } else {
-            Log.i("CoffeOrder", "Please select atleast one Pizza");
+            Log.i("Pizza_order", "Please select atleast one Pizza");
             Context context = getApplicationContext();
             String upperLimitToast = "Please select atleast 1 Pizza";
             int duration = Toast.LENGTH_SHORT;
