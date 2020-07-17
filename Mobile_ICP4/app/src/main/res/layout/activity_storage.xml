@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/note"
+    tools:context=".StorageActivity">
+    <EditText
+        android:id="@+id/txtData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:hint="Please enter the notes to save."/>
+
+    <Button
+        android:id="@+id/btnSaveData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtData"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="#FF4081"
+        android:onClick="save"
+        android:text="Save Data"/>
+    <Button
+        android:id="@+id/btnLoadData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="#FF4081"
+        android:layout_below="@+id/btnSaveData"
+        android:layout_marginTop="10dp"
+        android:onClick="load"
+        android:text="Load Data"/>
+
+    <TextView
+        android:id="@+id/lblData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnLoadData"
+        android:layout_marginTop="60dp"
+        android:textColor="#D83838"
+        android:textSize="24sp" />
+</RelativeLayout>

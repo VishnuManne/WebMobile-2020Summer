@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/voi"
+    tools:context=".RecordingActivity">
+
+    <Button
+        android:id="@+id/btnStartRecord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="180dp"
+        android:background="#FF4081"
+        android:onClick="startrecord"
+        android:text="Start Recording"/>
+    <Button
+        android:id="@+id/btnStopRecord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnStartRecord"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="180dp"
+        android:background="#FF4081"
+        android:layout_marginTop="10dp"
+        android:onClick="stopRecord"
+        android:text="Stop Recording"/>
+    <Button
+        android:id="@+id/btnStartPlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnStopRecord"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="180dp"
+        android:background="#FF4081"
+        android:layout_marginTop="10dp"
+        android:onClick="playRecord"
+        android:text="Play Recording"/>
+    <Button
+        android:id="@+id/btnStopPlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnStartPlay"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="180dp"
+        android:background="#FF4081"
+        android:layout_marginTop="10dp"
+        android:onClick="stopPlay"
+        android:text="Stop Recording"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="365dp"
+        android:layout_height="42dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="-26dp"
+        android:layout_marginRight="-26dp"
+        android:layout_marginBottom="625dp"
+        android:text="Wanna start a Recording ?"
+        android:textColor="#2196F3"
+        android:textSize="24sp" />
+
+</RelativeLayout>
