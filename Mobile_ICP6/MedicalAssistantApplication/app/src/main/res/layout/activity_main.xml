@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/b1"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="382dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/voiceInput"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:forceHasOverlappingRendering="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/btnSpeak"
+        android:layout_width="300px"
+        android:layout_height="300px"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="153dp"
+        android:layout_marginLeft="153dp"
+        android:layout_marginBottom="60dp"
+        android:background="@null"
+        android:padding="16dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/mic1" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="97dp"
+        android:layout_marginLeft="97dp"
+        android:layout_marginBottom="25dp"
+        android:text="@string/hint"
+        android:textColor="#1E88E5"
+        android:textSize="24sp" />
+
+
+</RelativeLayout>
